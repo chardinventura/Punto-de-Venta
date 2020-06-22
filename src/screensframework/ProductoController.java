@@ -2,6 +2,7 @@ package screensframework;
 
 import java.net.URL;
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
@@ -49,6 +50,8 @@ public class ProductoController implements Initializable, ControlledScreen {
     @FXML private TableColumn col;
     private Connection conexion;
     
+    private String valorAnterior;
+    
     ObservableList<ObservableList> producto;
     
     
@@ -71,7 +74,7 @@ public class ProductoController implements Initializable, ControlledScreen {
             conexion = DBConnection.connect();
             
             // COMBOBOX DE CATEGORIA
-            String slqCategoria = "SELECT idcategoria, nombre_categoria FROM category";
+            String slqCategoria = "SELECT idcategoria, nombre_categoria FROM categoria";
             ResultSet resultadoCategoria = conexion.createStatement().executeQuery(slqCategoria);
             while(resultadoCategoria.next()) {
                 cbCategoriaProducto.getItems().add(resultadoCategoria.getString("nombre_categoria"));
@@ -164,7 +167,7 @@ public class ProductoController implements Initializable, ControlledScreen {
             while(rs.next()){
                 //Iterate Row
                 ObservableList<String> row = FXCollections.observableArrayList();
-                for(int i = 1 ; i <= rs.getMetaData().getColumnCount()+1; i++){
+                for(int i = 1 ; i <= rs.getMetaData().getColumnCount(); i++){
                     //Iterate Column
                     row.add(rs.getString(i));
                 }
@@ -220,7 +223,13 @@ public class ProductoController implements Initializable, ControlledScreen {
                     btEliminarProducto.setStyle("-fx-background-color:#66CCCC");
                     btModificarProducto.setStyle("-fx-background-color:#66CCCC");
                     
-                    String valor = tablaProducto.getSelectionModel().getSelectedItems().get(0).toString();
+                    String valor = valorAnterior;
+                    
+                    if(!tablaProducto.getSelectionModel().getSelectedItems().isEmpty()) {
+                    	
+                    	valor = tablaProducto.getSelectionModel().getSelectedItems().get(0).toString();
+                    	valorAnterior = valor;
+                    }
                     
                     String cincoDigitos = valor.substring(1, 6);
                     String cuatroDigitos = valor.substring(1, 5);
@@ -265,7 +274,7 @@ public class ProductoController implements Initializable, ControlledScreen {
         
         try {
             conexion = DBConnection.connect();
-            String sql = "INSERT INTO product "
+            String sql = "INSERT INTO producto"
                     + " (nombre_producto, precio, idcategoria, idmarca) "
                     + " VALUES (?, ?, ?, ?)";
             PreparedStatement estado = conexion.prepareStatement(sql);
@@ -340,7 +349,7 @@ public class ProductoController implements Initializable, ControlledScreen {
 
                 PreparedStatement estado = conexion.prepareStatement(sql);
 
-                estado.executeUpdate();
+                int n = estado.executeUpdate();
 
                 if (n > 0) {
                     tablaProducto.getColumns().clear();

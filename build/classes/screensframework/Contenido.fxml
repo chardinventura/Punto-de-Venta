@@ -17,7 +17,7 @@
       <children>
         <HBox prefHeight="100.0" prefWidth="200.0" spacing="20.0" styleClass="fondbox" VBox.margin="$x1">
           <children>
-            <Label prefWidth="368.0" styleClass="labels" text="Mi aplicación" textFill="WHITE">
+            <Label prefWidth="500.0" styleClass="labels" text="Mi aplicación" textFill="WHITE">
               <effect>
                 <Bloom />
               </effect>
