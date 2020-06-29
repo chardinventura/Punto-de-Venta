@@ -79,8 +79,8 @@
                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                       <children>
                         <TableView id="tablaProductos" fx:id="tablaProducto" layoutX="0.0" layoutY="71.0" onMouseClicked="#getProductoSeleccionado" prefHeight="321.0" prefWidth="501.0" />
-                        <TextField fx:id="tfBuscarProducto" layoutX="14.0" layoutY="20.0" prefWidth="200.0" promptText="Ingrese el producto a buscar" />
-                        <Button layoutX="222.0" layoutY="18.0" mnemonicParsing="false" onAction="#buscarProducto" styleClass="botones" text="Buscar" textFill="WHITE">
+                        <TextField fx:id="tfBuscarProducto" layoutX="14.0" layoutY="20.0" prefWidth="203.0" promptText="Ingrese el producto a buscar" />
+                        <Button layoutX="224.0" layoutY="20.0" mnemonicParsing="false" onAction="#buscarProducto" styleClass="botones" text="Buscar" textFill="WHITE">
                           <font>
                             <Font name="System Bold" size="12.0" fx:id="x2" />
                           </font>
@@ -99,16 +99,16 @@
                       <children>
                         <Label layoutX="7.0" layoutY="77.0" text="Nombre" />
                         <Label layoutX="7.0" layoutY="110.0" text="Precio" />
-                        <Label layoutX="7.0" layoutY="143.0" text="Categoria" />
-                        <TextField id="tfProductoNombre" fx:id="tfNombreProducto" layoutX="55.0" layoutY="74.0" prefWidth="178.0" />
-                        <TextField id="tfProductoPrecio" fx:id="tfPrecioProducto" layoutX="55.0" layoutY="107.0" prefWidth="178.0" />
-                        <ComboBox id="cbProductoCategoria" fx:id="cbCategoriaProducto" layoutX="70.0" layoutY="142.0" prefHeight="21.0" prefWidth="163.0" promptText="Seleccionar">
+                        <Label layoutX="7.0" layoutY="143.0" text="Categoría" />
+                        <TextField id="tfProductoNombre" fx:id="tfNombreProducto" layoutX="73.0" layoutY="74.0" prefWidth="160.0" />
+                        <TextField id="tfProductoPrecio" fx:id="tfPrecioProducto" layoutX="73.0" layoutY="107.0" prefWidth="160.0" />
+                        <ComboBox id="cbProductoCategoria" fx:id="cbCategoriaProducto" layoutX="73.0" layoutY="142.0" prefHeight="21.0" prefWidth="160.0" promptText="Seleccionar">
                           <items>
                             <FXCollections fx:factory="observableArrayList" />
                           </items>
                         </ComboBox>
                         <Label layoutX="7.0" layoutY="179.0" text="Marca" />
-                        <ComboBox id="cbProductoMarca" fx:id="cbMarcaProducto" layoutX="55.0" layoutY="178.0" prefHeight="21.0" prefWidth="178.0" promptText="Seleccionar">
+                        <ComboBox id="cbProductoMarca" fx:id="cbMarcaProducto" layoutX="73.0" layoutY="178.0" prefHeight="21.0" prefWidth="160.0" promptText="Seleccionar">
                           <items>
                             <FXCollections fx:factory="observableArrayList" />
                           </items>
@@ -133,13 +133,13 @@
                             <URL value="@../img_css/estilo1.css" />
                           </stylesheets>
                         </Button>
-                        <Label layoutX="24.0" layoutY="14.0" prefWidth="191.0" text="Matenmiento de productos" textAlignment="LEFT">
+                        <Label layoutX="7.0" layoutY="14.0" prefWidth="229.0" text="Mantenimiento de productos" textAlignment="LEFT">
                           <font>
                             <Font name="System Bold" size="14.0" fx:id="x3" />
                           </font>
                         </Label>
-                        <Label fx:id="lbCodigoProducto" font="$x3" layoutX="40.0" layoutY="40.0" prefHeight="24.0" prefWidth="141.0" text="" textFill="#cc0000" />
-                        <Label layoutX="7.0" layoutY="45.0" text="Cod:" />
+                        <Label fx:id="lbCodigoProducto" font="$x3" layoutX="73.0" layoutY="40.0" prefHeight="24.0" prefWidth="141.0" text="" textFill="#cc0000" />
+                        <Label layoutX="7.0" layoutY="45.0" text="Código:" />
                       </children>
                     </AnchorPane>
                   </items>
@@ -159,9 +159,9 @@
         </HBox>
         <HBox alignment="CENTER_RIGHT" prefHeight="39.0" prefWidth="800.0" spacing="20.0">
           <children>
-            <Hyperlink text="Prenferencias" />
-            <Hyperlink text="Ayuda" />
-            <Hyperlink onAction="#salir" text="Salir del sistema" />
+            <Hyperlink text="Preferencias" textFill="BLACK"/>
+            <Hyperlink text="Ayuda" textFill="BLACK"/>
+            <Hyperlink onAction="#salir" text="Salir del sistema" textFill="BLACK"/>
           </children>
           <padding>
             <Insets right="10.0" />

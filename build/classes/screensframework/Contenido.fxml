@@ -87,9 +87,9 @@
         </HBox>
         <HBox alignment="CENTER_RIGHT" prefHeight="39.0" prefWidth="800.0" spacing="20.0">
           <children>
-            <Hyperlink text="Prenferencias" />
-            <Hyperlink text="Ayuda" />
-            <Hyperlink onAction="#salir" text="Salir del sistema" />
+            <Hyperlink text="Preferencias" textFill="BLACK"/>
+            <Hyperlink text="Ayuda" textFill="BLACK"/>
+            <Hyperlink onAction="#salir" text="Salir del sistema" textFill="BLACK"/>
           </children>
           <padding>
             <Insets right="10.0" />

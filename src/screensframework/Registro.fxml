@@ -18,7 +18,7 @@
       <children>
         <HBox prefHeight="100.0" prefWidth="200.0" spacing="20.0" styleClass="fondbox" VBox.margin="$x1">
           <children>
-            <Label prefWidth="368.0" styleClass="labels" text="Mi aplicación" textFill="WHITE">
+            <Label prefWidth="500.0" styleClass="labels" text="Mi aplicación" textFill="WHITE">
               <effect>
                 <Bloom />
               </effect>
@@ -50,7 +50,7 @@
         </HBox>
         <HBox alignment="CENTER" prefHeight="50.0" prefWidth="200.0">
           <children>
-            <Label prefWidth="129.0" styleClass="labels2" text="Regístrate">
+            <Label prefWidth="180.0" styleClass="labels2" text="Regístrate">
               <effect>
                 <Bloom />
               </effect>
@@ -72,7 +72,7 @@
                 <TextField fx:id="tfAddCorreo" layoutX="138.0" layoutY="199.0" prefWidth="250.0" promptText="Por ejemplo: example@hotmail.com" style="-fx-border-color: #3399CC" />
                 <Label layoutX="61.0" layoutY="118.0" prefWidth="250.0" text="Apellido" />
                 <Label layoutX="61.0" layoutY="162.0" prefWidth="250.0" text="Sexo" />
-                <ComboBox fx:id="cbAddsex" editable="false" layoutX="138.0" layoutY="159.0" prefHeight="21.0" prefWidth="120.0" promptText="Selecciona" />
+                <ComboBox fx:id="cbAddsex" editable="false" layoutX="138.0" layoutY="159.0" prefHeight="21.0" prefWidth="125.0" promptText="Selecciona" />
                 <Label layoutX="61.0" layoutY="199.0" prefWidth="44.0" text="Correo" />
                 <Label layoutX="61.0" layoutY="247.0" text="Contraseña" />
                 <Label layoutX="61.0" layoutY="293.0" prefWidth="50.0" text="Repetir" />
@@ -108,9 +108,9 @@
         </HBox>
         <HBox alignment="CENTER_RIGHT" prefHeight="39.0" prefWidth="800.0" spacing="20.0">
           <children>
-            <Hyperlink text="Prenferencias" />
-            <Hyperlink text="Ayuda" />
-            <Hyperlink onAction="#regresarPrincipal" text="Volver" />
+            <Hyperlink text="Preferencias" textFill="BLACK"/>
+            <Hyperlink text="Ayuda" textFill="BLACK"/>
+            <Hyperlink onAction="#regresarPrincipal" text="Volver" textFill="BLACK"/>
           </children>
           <padding>
             <Insets right="10.0" />
